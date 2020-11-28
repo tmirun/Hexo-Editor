@@ -1,6 +1,13 @@
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 
+var Hexo = require('hexo');
+var hexo = new Hexo('/Users/Admin/projects/test-blog', {});
+
+hexo.init().then(function(){
+    console.log('initialize')
+});
+
 app.on('ready', () => {
     console.log('App is ready');
 
